@@ -1,0 +1,34 @@
+{
+  "name": "additive",
+  "description": "Additive animations for everyone",
+  "version": "0.0.0",
+  "author": "Denis Karabaza <denis.karabaza@gmail.com>",
+  "browserify": {
+    "transform": [
+      "envify"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/simplesmiler/additive/issues"
+  },
+  "dependencies": {
+    "envify": "^3.4.0",
+    "performance-now": "^0.2.0"
+  },
+  "homepage": "https://github.com/simplesmiler/additive",
+  "keywords": [
+    "additive",
+    "animation",
+    "transition"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simplesmiler/additive"
+  },
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
