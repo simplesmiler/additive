@@ -2,11 +2,7 @@
 
 # additive
 
-> Additive animations for everyone
-
-## Requirements
-
-- browserify or webpack
+> Additive animations the MVVM way
 
 ## Install
 
@@ -20,4 +16,4 @@ $ npm install additive --save
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[ISC](http://opensource.org/licenses/ISC)

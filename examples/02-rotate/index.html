@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Additive Example: Click to Move</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script src="../../dist/additive.js"></script>
+</head>
+<body>
+
+  <div class="description">
+    <p>In <span class="description-css">CSS</span> angles are interpolated linearly, so interpolation between two angles close to PI and -PI goes through 0, making full rotation.</p>
+    <p>In <span class="description-js">JavaScript</span> we can use some math to achieve torque-minimal rotation.</p>
+    <p>Click on the left part of the gray box to see the difference.</p>
+    <p>
+      <input type="button" class="button-rotate" value="Rotate randomly">
+      <input type="button" class="button-toggle-visibility" value="Toggle visibility">
+      <input type="button" class="button-toggle-move" value="Toggle move/click">
+    </p>
+  </div>
+
+  <div class="screen">
+    <div class="sprite2 sprite-model"></div>
+    <div class="sprite8 sprite-css"></div>
+    <div class="sprite8 sprite-additive"></div>
+  </div>  
+  
+  <script src="./index.js"></script>
+  
+</body>
+</html>

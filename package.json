@@ -1,6 +1,6 @@
 {
   "name": "additive",
-  "description": "Additive animations for everyone",
+  "description": "Additive animations the MVVM way",
   "version": "0.0.0",
   "author": "Denis Karabaza <denis.karabaza@gmail.com>",
   "browserify": {
@@ -13,22 +13,32 @@
   },
   "dependencies": {
     "envify": "^3.4.0",
+    "object-assign": "^4.0.1",
     "performance-now": "^0.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "eslint": "^1.5.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.3"
   },
   "homepage": "https://github.com/simplesmiler/additive",
   "keywords": [
     "additive",
     "animation",
-    "transition"
+    "mvvm",
+    "transition",
+    "web"
   ],
-  "license": "MIT",
-  "main": "index.js",
+  "license": "ISC",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/simplesmiler/additive"
   },
   "scripts": {
-    "lint": "eslint index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "./node_modules/.bin/browserify lib/bundle.js -s additive -o dist/additive.js",
+    "lint": "./node_modules/.bin/eslint lib test examples",
+    "test": "./node_modules/.bin/mocha test"
   }
 }

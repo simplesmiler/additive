@@ -1,0 +1,55 @@
+.description {
+  width: 512px;
+}
+
+.description-css {
+  color: rgb(255, 183, 0);
+}
+
+.description-js {
+  color: rgb(65, 160, 231);
+}
+
+/* @NOTE: set up a screen where sprites will be displayed */
+.screen {
+  position: relative;
+  width: 480px; height: 360px;
+  background-color: lightgray;
+}
+
+/* @NOTE: set up sprites so that "transform centers" are in the middle of a sprite */
+.sprite64 {
+  position: absolute;
+  will-change: transform;
+  pointer-events: none;
+  width: 64px; height: 64px;
+  margin-left: -32px; margin-top: -32px;
+}
+
+.sprite8 {
+  position: absolute;
+  will-change: transform;
+  pointer-events: none;
+  width: 8px; height: 8px;
+  margin-left: -4px; margin-top: -4px;
+}
+
+.sprite-model {
+  transform: translate(240px, 180px);
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* @NOTE: sprite-css uses css transition */
+/* @NOTE: this needs initial transform to not jump on page load */
+.sprite-css {
+  transform: translate(240px, 180px);
+  transition: transform 1.5s;
+  background-color: rgba(255, 183, 0, 0.75);
+}
+
+/* @NOTE: sprite-additive does NOT use css transition */
+.sprite-additive {
+  transform: translate(240px, 180px);
+  background-color: rgba(65, 160, 231, 0.75);
+}
+
