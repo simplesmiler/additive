@@ -22,12 +22,12 @@
 
   // @NOTE: viewmodel of a sprite
   var sprite = additive.make({
-    schema: { spin: spinor.slerp },
-    model: { spin: spinor.make(0) },
+    schema: { spin: spinor.schema },
+    model: { spin: spinor.fromAngle(0) },
   });
 
   function applyState(el, state) {
-    var angle = spinor.vang(state.spin);
+    var angle = spinor.toAngle(state.spin);
     el.style.transform = 'rotate(' + angle + 'rad)';
   }
 
@@ -55,7 +55,7 @@
     var x = ev.clientX - screen.offsetLeft - screen.offsetWidth / 2;
     var y = ev.clientY - screen.offsetTop - screen.offsetHeight / 2;
     var angle = Math.atan2(y, x);
-    var spin = spinor.make(angle);
+    var spin = spinor.fromAngle(angle);
     rotateModel(spin);
     rotateCss(spin);
     rotateAdditive(spin);
@@ -66,7 +66,7 @@
     var x = Math.floor(Math.random() * screen.offsetWidth) - spriteCss.offsetLeft - spriteCss.offsetWidth / 2;
     var y = Math.floor(Math.random() * screen.offsetWidth) - spriteCss.offsetTop - spriteCss.offsetHeight / 2;
     var angle = Math.atan2(y, x);
-    var spin = spinor.make(angle);
+    var spin = spinor.fromAngle(angle);
     rotateModel(spin);
     rotateCss(spin);
     rotateAdditive(spin);

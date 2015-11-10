@@ -22,7 +22,7 @@
 
   // @NOTE: viewmodel of a sprite
   var sprite = additive.make({
-    schema: { x: linear.lerp, y: linear.lerp },
+    schema: { x: linear.schema, y: linear.schema },
     model: { x: screen.offsetWidth / 2, y: screen.offsetHeight / 2 },
   });
 

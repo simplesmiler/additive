@@ -1,7 +1,6 @@
 var expect = require('expect.js');
 
-var util = require('../lib/util');
-var interpolate = require('../lib/interpolate');
+var additive = require('..');
 var linear = require('../lib/schema/linear');
 var spinor = require('../lib/schema/spinor');
 var composite = require('../lib/schema/composite');
@@ -10,53 +9,65 @@ var composite = require('../lib/schema/composite');
 
 describe('api:', function() {
 
-  describe('interpolate.js:', function() {
+  describe('index.js:', function() {
 
-    it('should export a function as `default`', function() {
-      expect(interpolate).to.be.a('function');
+    it('should export `make` function', function() {
+      expect(additive.make).to.be.a('function');
     });
 
-  });
-
-  describe('util.js:', function() {
-
-    it('should export a `now` function', function() {
-      expect(util.now).to.be.a('function');
+    it('should export `animate` function', function() {
+      expect(additive.animate).to.be.a('function');
     });
 
-    it('should export a `assign` function', function() {
-      expect(util.assign).to.be.a('function');
+    it('should export `render` function', function() {
+      expect(additive.render).to.be.a('function');
+    });
+
+    it('should export `trim` function', function() {
+      expect(additive.trim).to.be.a('function');
+    });
+
+    it('should export `isAnimating` function', function() {
+      expect(additive.isAnimating).to.be.a('function');
     });
 
   });
 
   describe('schemas/linear.js:', function() {
 
-    it('should export a `lerp` function', function() {
-      expect(linear.lerp).to.be.a('function');
+    it('should export `schema` function', function() {
+      expect(linear.schema).to.be.a('function');
     });
 
   });
 
   describe('schemas/spinor.js:', function() {
 
-    it('should export a `make` function', function() {
-      expect(spinor.make).to.be.a('function');
+    it('should export `fromAngle` function', function() {
+      expect(spinor.fromAngle).to.be.a('function');
     });
 
-    it('should export a `slerp` function', function() {
-      expect(spinor.slerp).to.be.a('function');
+    it('should export `toAngle` function', function() {
+      expect(spinor.toAngle).to.be.a('function');
+    });
+
+    it('should export `almostEqual` function', function() {
+      expect(spinor.almostEqual).to.be.a('function');
+    });
+
+    it('should export `schema` function', function() {
+      expect(spinor.schema).to.be.a('function');
     });
 
   });
 
   describe('schemas/composite.js:', function() {
 
-    it('should export a `bag` function', function() {
+    it('should export `bag` function', function() {
       expect(composite.bag).to.be.a('function');
     });
 
-    it('should export a `list` function', function() {
+    it('should export `list` function', function() {
       expect(composite.list).to.be.a('function');
     });
 
