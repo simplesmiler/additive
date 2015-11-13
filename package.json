@@ -1,7 +1,7 @@
 {
   "name": "additive",
   "description": "Additive animations the MVVM way",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Denis Karabaza <denis.karabaza@gmail.com>",
   "browserify": {
     "transform": [
